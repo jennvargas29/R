@@ -1,0 +1,61 @@
+
+
+```{r}
+#First 10 Fibonacci Numbers
+
+library(ggplot2)
+library(scales)
+library(numbers)
+
+fibonacci(10,sequence = TRUE)
+```
+
+
+
+
+```{r}
+
+#Read a .CSV file
+
+
+data <- read.csv('input.csv', header=TRUE, stringsAsFactors=FALSE)
+data
+
+```
+
+```{r}
+
+# Select and change some values to NA
+
+
+is.na(data$salary) <- data$name == "Ryan"
+is.na(data$salary) <- data$name == "Nina"
+print(data)
+```
+
+```{r}
+# Replace the NA values with mean
+
+
+data$salary[is.na(data$salary)] <- mean(data$salary, na.rm = T)  
+print(data)
+```
+
+```{r}
+# Create three vectors and combine setting them to a matrix
+
+a <- c(5,6,7)
+b <- c(50,60,70)
+c <- c(10,20,30)
+
+dMatrix <-cbind(a,b,c)
+print(dMatrix)
+```
+
+
+```{r}
+# Create a vector with 10 random integers between -50 and +50
+
+d = sample(-50:50, 10, replace=TRUE)
+print(d)
+```
