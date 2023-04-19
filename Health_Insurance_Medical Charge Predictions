@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Load in the data and foundid all the numeric columns
+## Load in the data and founding all the numeric columns
 ```{r}
 df = read.csv('insurance.csv', header=TRUE)
 num_cols <- unlist(lapply(df, is.numeric))  
